@@ -26,12 +26,17 @@ then
     # Install latest stable version of MongoDB
     apt-get install -y mongodb-10gen
 
+    # Install nodemon to restart the server on changes
+    npm install nodemon
+
     # Symlink our host www to the guest /var/www folder
     ln -s /vagrant/www /var/www
 
     # Victory!
-    echo "You're all done! Your default node server should now be listening on http://10.0.33.34/. For code, see: node-mongo-vagrant/www/default/server.js."
+    echo "You're all done! Your default node server should now be listening on http://10.0.33.34/. For code, see: ./www/default/server.js."
 
     # Run it
+    # Fixme: nodemon doesn't work here?
+    #nodemon /var/www/default/server.js
     node /var/www/default/server.js
 fi
