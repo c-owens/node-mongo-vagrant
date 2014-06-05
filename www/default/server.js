@@ -5,7 +5,7 @@ var header = {
 	"Content-Type": "text/html"
 };
 
-// Handle incoming requests
+// Handle incoming requests.
 var app = http.createServer( function( request, response ) {
 
 	sys.puts( "Incoming request! Woo!" );
@@ -15,6 +15,6 @@ var app = http.createServer( function( request, response ) {
 
 });
 
-// Listen for incoming requests on port 80
+// Listen for incoming requests on port 80.
 app.listen(80);
 
